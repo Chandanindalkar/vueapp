@@ -1,12 +1,17 @@
 <script>
 export default {
-  props: ['modalTitle', 'modalContent', 'theme']
+  props: ['modalTitle', 'modalContent', 'theme'],
+  methods: {
+    closeModal() {
+      this.$emit('close')
+    }
+  }
 }
 
 </script>
 
 <template>
-  <div class="backdrop">
+  <div class="backdrop" @click="closeModal">
     <div class="modal"
       :class="{dark: theme === 'dark'}"
     >
