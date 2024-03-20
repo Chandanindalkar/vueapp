@@ -14,6 +14,8 @@ It is a good practice to pass data from parent to child rather than having data 
 # Emits
 ```
 Emits allow child components to emit data for child to parent communication
+```
+
 ## Project setup
 ```
 npm install
