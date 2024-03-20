@@ -1,12 +1,15 @@
-<script setup>
+<script>
+export default {
+  props: ['title', 'content']
+}
 
 </script>
 
 <template>
   <div class="backdrop">
     <div class="modal">
-      <h1>Modal Title</h1>
-        <p>Modal Content</p>
+      <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
     </div>
   </div>
 </template>

@@ -33,6 +33,8 @@ export default {
   <h2 v-if="bool">Modal added to the DOM</h2>
   <ModalView 
     v-if="bool"
+    title="Modal Title"
+    content="This data content is passed by a Prop"
     @click="handleClick"
   ></ModalView>
 </template>
