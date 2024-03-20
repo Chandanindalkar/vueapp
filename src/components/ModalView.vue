@@ -1,6 +1,6 @@
 <script>
 export default {
-  props: ['title', 'content']
+  props: ['modalTitle', 'modalContent']
 }
 
 </script>
@@ -8,8 +8,8 @@ export default {
 <template>
   <div class="backdrop">
     <div class="modal">
-      <h1>{{ title }}</h1>
-        <p>{{ content }}</p>
+      <h1>{{ modalTitle }}</h1>
+        <p>{{ modalContent }}</p>
     </div>
   </div>
 </template>

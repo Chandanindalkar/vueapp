@@ -6,7 +6,9 @@ export default {
     return {
       title: "Vue Modal",
       desc: "click on the below input field",
-      bool: false
+      bool: false,
+      modalTitle: "Modal Title",
+      modalContent: "This data content is passed by a Prop",
     }
   },
   name: 'App', // optional
@@ -31,10 +33,11 @@ export default {
   <input type="text" ref="name">
   <button @click="handleClick">Click Me</button>
   <h2 v-if="bool">Modal added to the DOM</h2>
+
   <ModalView 
     v-if="bool"
-    title="Modal Title"
-    content="This data content is passed by a Prop"
+    :modalTitle="modalTitle"
+    :modalContent="modalContent"
     @click="handleClick"
   ></ModalView>
 </template>
