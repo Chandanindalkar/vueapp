@@ -38,6 +38,7 @@ export default {
     v-if="bool"
     :modalTitle="modalTitle"
     :modalContent="modalContent"
+    theme="dark"
     @click="handleClick"
   ></ModalView>
 </template>

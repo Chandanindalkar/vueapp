@@ -1,16 +1,18 @@
 <script>
 export default {
-  props: ['modalTitle', 'modalContent']
+  props: ['modalTitle', 'modalContent', 'theme']
 }
 
 </script>
 
 <template>
   <div class="backdrop">
-    <div class="modal">
+    <div class="modal"
+      :class="{dark: theme === 'dark'}"
+    >
       <h1>{{ modalTitle }}</h1>
         <p>{{ modalContent }}</p>
-    </div>
+    </div> 
   </div>
 </template>
 
@@ -28,5 +30,10 @@ export default {
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
+  }
+  /* any modal that also has the sale class */
+  .modal.dark {
+    background-color: rgb(71, 71, 71);
+    color: rgb(228, 228, 228);
   }
 </style>
