@@ -1,3 +1,10 @@
+# <slot>
+```
+slots allow you pass custom template that need to be rendered in a component.
+
+slots helps to maximize reusability of component by replacing the <slot> placeholder in the component with the custom template given when the component is used.
+```
+
 # MODAL
 ```
 The Modal component lets you create dialogs, popovers, lightboxes, and other elements that force the user to take action before continuing.
@@ -14,6 +21,8 @@ It is a good practice to pass data from parent to child rather than having data 
 # Emits
 ```
 Emits allow child components to emit data for child to parent communication
+```
+
 ## Project setup
 ```
 npm install

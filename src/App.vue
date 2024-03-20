@@ -8,8 +8,8 @@ export default {
       desc: "click on the below button",
       bool: false,
       showModal: false,
-      modalTitle: "Modal Title",
-      modalContent: "This data content is passed by a Prop",
+      // modalTitle: "Modal Title",
+      // modalContent: "This data content is passed by a Prop",
     }
   },
   name: 'App', // optional
@@ -38,15 +38,16 @@ export default {
 
   <ModalView
     v-if="showModal"
-    :modalTitle="modalTitle"
-    :modalContent="modalContent"
     theme="dark"
     @close="toggleModal"
-  ></ModalView>
+  >
+    <h1>Modal Title</h1>
+    <p>This data content is passed by a Prop</p>
+  </ModalView>
   <button @click="toggleModal">Show Modal</button>
 </template>
 
-<style>
+<style> 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

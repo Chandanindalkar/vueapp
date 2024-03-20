@@ -15,8 +15,7 @@ export default {
     <div class="modal"
       :class="{dark: theme === 'dark'}"
     >
-      <h1>{{ modalTitle }}</h1>
-        <p>{{ modalContent }}</p>
+      <slot></slot>
     </div> 
   </div>
 </template>
