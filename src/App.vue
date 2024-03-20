@@ -4,7 +4,7 @@
   <h1>{{ desc }}</h1>
   <input type="text" ref="name">
   <button @click="handleClick">Click Me</button>
-  <h2 v-if="bool">class added to the ref element</h2>
+  <h2 v-if="bool">CSS class added to the ref element</h2>
 </template>
 
 <script>
