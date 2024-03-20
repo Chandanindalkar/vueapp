@@ -4,6 +4,10 @@ slots allow you pass custom template that need to be rendered in a component.
 
 slots helps to maximize reusability of component by replacing the <slot> placeholder in the component with the custom template given when the component is used.
 ```
+# Named Slots
+```
+Named slots allow you to pass a specific template containing the property v-slot:name to target a specific slot with the property name="name"
+```
 
 # MODAL
 ```
