@@ -1,11 +1,6 @@
-# Template Refs
+# MODAL
 ```
-Template Refs allow you to store an element in a variable to perform javascript on it
-```
-
-# usage
-```
-used template refs to store an input element in a variable to perform javascript on it, in this example: added a simple class to input element to reflect dom manipulation
+The Modal component lets you create dialogs, popovers, lightboxes, and other elements that force the user to take action before continuing.
 ```
 
 ## Project setup

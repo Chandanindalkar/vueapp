@@ -1,25 +1,17 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>{{ title }}</h1>
-  <h1>{{ desc }}</h1>
-  <input type="text" ref="name">
-  <button @click="handleClick">Click Me</button>
-  <h2 v-if="bool">CSS class added to the ref element</h2>
-</template>
-
 <script>
+import ModalView from './components/ModalView.vue'
 
 export default {
   data() {
     return {
-      title: "Template Refs",
+      title: "Vue Modal",
       desc: "click on the below input field",
       bool: false
     }
   },
   name: 'App', // optional
   components: {
-
+    ModalView
   },
   methods: {
     handleClick() {
@@ -31,6 +23,19 @@ export default {
   }
 }
 </script>
+
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <h1>{{ title }}</h1>
+  <h1>{{ desc }}</h1>
+  <input type="text" ref="name">
+  <button @click="handleClick">Click Me</button>
+  <h2 v-if="bool">Modal added to the DOM</h2>
+  <ModalView 
+    v-if="bool"
+    @click="handleClick"
+  ></ModalView>
+</template>
  
 <style>
 #app {
@@ -47,4 +52,4 @@ export default {
   color: blue;
   border-width: 10px;
 }
-</style>
+</style>./components/ModalView.vue
