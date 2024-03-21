@@ -41,12 +41,12 @@ export default {
     theme="dark"
     @close="toggleModal"
   >
-    <h1>Modal Title</h1>
-    <p>This data content is passed by a Prop</p>
-    <template v-slot:links>
-      <a href="#">Sign Up Now!</a>
-      <a href="#">More Information</a>
-    </template>
+  <template v-slot:links>
+    <a href="#">Sign Up Now!</a>
+    <a href="#">More Information</a>
+  </template>
+  <h1>Modal Title</h1>
+  <p>This data content is passed by a Prop</p>
   </ModalView>
   <button @click="toggleModal">Show Modal</button>
 </template>

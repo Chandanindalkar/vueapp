@@ -1,29 +1,28 @@
+<template>
+  <div class="backdrop" @click.self="closeModal">
+    <div class="modal"
+      :class="{dark: theme === 'dark'}"
+    >
+      <slot>
+        This data is shown when a template is not Passed
+      </slot>
+      <div class="actions">
+        <slot name="links"></slot>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
 export default {
-  props: ['modalTitle', 'modalContent', 'theme'],
+  props: ['theme'],
   methods: {
     closeModal() {
       this.$emit('close')
     }
   }
 }
-
 </script>
-
-<template>
-  <div class="backdrop" @click.self="closeModal">
-    <div class="modal"
-      :class="{dark: theme === 'dark'}"
-    >
-      <slot></slot>
-      <div class="actions">
-        <slot name="links">
-          This data is shown when a template is not Passed
-        </slot>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style scoped>
   .modal {
@@ -52,8 +51,8 @@ export default {
   .modal .actions {
     text-align: center;
     margin: 30px 0 10px 0;
-    color: #333;
   }
+
   .modal .actions a {
     color: #333;
     padding: 8px;
@@ -71,7 +70,7 @@ export default {
 
   .modal.dark h1 {
     color: white;
-  }
+  } 
   .modal.dark .actions {
     color: white;
   }
