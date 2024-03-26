@@ -35,19 +35,22 @@ export default {
   <h1>{{ title }}</h1>
   <h1>{{ desc }}</h1>
   <h2 v-if="showModal">Modal added to the DOM</h2>
+  
+  <teleport to='#modal' >  
+    <ModalView
+      v-if="showModal"
+      theme="dark"
+      @close="toggleModal"
+    >
+    <template v-slot:links>
+      <a href="#">Sign Up Now!</a>
+      <a href="#">More Information</a>
+    </template>
+    <h1>Modal Title</h1>
+    <p>This data content is passed by a Prop</p>
+    </ModalView>
+  </teleport>
 
-  <ModalView
-    v-if="showModal"
-    theme="dark"
-    @close="toggleModal"
-  >
-  <template v-slot:links>
-    <a href="#">Sign Up Now!</a>
-    <a href="#">More Information</a>
-  </template>
-  <h1>Modal Title</h1>
-  <p>This data content is passed by a Prop</p>
-  </ModalView>
   <button @click="toggleModal">Show Modal</button>
 </template>
 
@@ -66,4 +69,4 @@ export default {
   color: blue;
   border-width: 10px;
 }
-</style>./components/ModalView.vue
+</style>

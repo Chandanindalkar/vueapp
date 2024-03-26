@@ -1,3 +1,15 @@
+# Teleport
+```
+The main use case for Teleport is when you need to render a component's content in a different part of the DOM, such as rendering a modal dialog outside the main app root.
+```
+
+# why teleport?
+```
+For positioning reasons
+Drag-and-drop interfaces
+Scrollable Content: Teleport allows you to render content outside of the scrolling container, ensuring it remains visible even when the container is scrolled.
+```
+
 # <slot>
 ```
 slots allow you pass custom template that need to be rendered in a component.
